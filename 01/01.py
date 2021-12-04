@@ -1,12 +1,15 @@
+"""Day 1"""
 from pathlib import Path
 from typing import List
 
 
 def count_depth_increase(depths: List[int]) -> int:
+    """Part 1"""
     return sum(depths[n + 1] > depths[n] for n in range(len(depths) - 1))
 
 
 def sliding_window_3(depths: List[int]) -> List[int]:
+    """Create sliding window summation for Part 2"""
     return [depths[n] + depths[n + 1] + depths[n + 2] for n in range(len(depths) - 2)]
 
 

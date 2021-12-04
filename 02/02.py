@@ -1,3 +1,4 @@
+"""Day 2"""
 from pathlib import Path
 from typing import Dict, List
 
@@ -5,15 +6,18 @@ DIRECTION_MAP: Dict[str, complex] = {"forward": 1, "up": 1j, "down": -1j}
 
 
 def parse_movements(movements: str) -> List[complex]:
+    """Convert movements to complex numbers representing 2D"""
     return [DIRECTION_MAP[movement.split(" ")[0]] * int(movement.split(" ")[1]) for movement in movements.split("\n")]
 
 
 def mult(movements: str) -> int:
+    """Part 1"""
     z = sum(parse_movements(movements))
     return abs(int(z.real * z.imag))
 
 
 def calc_aim(movements: str) -> int:
+    """Part 2"""
     moves = parse_movements(movements)
     z = 0j
     aim = 0

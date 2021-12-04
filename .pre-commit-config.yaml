@@ -31,3 +31,9 @@ repos:
         language: python
         entry: mypy
         types: [python]
+
+      - id: pylint
+        name: pylint
+        language: python
+        entry: pylint
+        types: [python]
