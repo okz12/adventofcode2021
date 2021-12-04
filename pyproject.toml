@@ -1,0 +1,36 @@
+
+[tool.poetry]
+name = "adventofcode2021"
+version = "0.1.0"
+description = "Advent of Code 2021 (Python)"
+authors = ["Osman <5850274+okz12@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^21.11b1"
+pylint = "^2.12.2"
+flake8 = "^4.0.1"
+pre-commit = "^2.16.0"
+mypy = "^0.910"
+flake8-bugbear = "^21.11.29"
+flake8-comprehensions = "^3.7.0"
+flake8-simplify = "^0.14.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+multi_line_output = 3
+line_length = 120
+include_trailing_comma = true
+
+[tool.mypy]
+ignore_missing_imports = true
