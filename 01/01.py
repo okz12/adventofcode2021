@@ -1,8 +1,9 @@
+from pathlib import Path
 from typing import List
 
 
 def count_depth_increase(depths: List[int]) -> int:
-    return sum(b > a for a, b in zip(depths[:-1], depths[1:]))
+    return sum(depths[n + 1] > depths[n] for n in range(len(depths) - 1))
 
 
 def sliding_window_3(depths: List[int]) -> List[int]:
@@ -22,7 +23,7 @@ if __name__ == "__main__":
 260
 263\
 """
-    with open("input.txt", "r") as f:
+    with open(Path(__file__).parent / "input.txt", "r") as f:
         data = f.read()
 
     testcase_nums = [int(x) for x in testcase.split()]
