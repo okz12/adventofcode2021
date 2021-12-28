@@ -4,7 +4,7 @@ from typing import Dict
 
 BRACKET_MAP: Dict[str, str] = {"<": ">", "(": ")", "[": "]", "{": "}"}
 
-BRACKET_POINTS = {")": 3, "]": 57, "}": 1197, ">": 25137}
+BRACKET_POINTS: Dict[str, int] = {")": 3, "]": 57, "}": 1197, ">": 25137}
 
 BRACKET_COMPL_POINTS: Dict[str, int] = {")": 1, "]": 2, "}": 3, ">": 4}
 
